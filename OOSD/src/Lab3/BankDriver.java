@@ -9,22 +9,16 @@ public class BankDriver
 		
 		SavingsAccount saver2 = new SavingsAccount(3000.00);
 		
-		///Set Interest to 4%
-		SavingsAccount.modifyInterestRate(0.04f);
-		
-		saver1.calculateMonthlyInterest();
-		saver2.calculateMonthlyInterest();
-		
-		System.out.println(saver1);
-		System.out.println(saver2.toString());
-		
-		///Set Interest to 5%
 		SavingsAccount.modifyInterestRate(0.05f);
 		
 		saver1.calculateMonthlyInterest();
 		saver2.calculateMonthlyInterest();
 		
-		System.out.println(saver1);
-		System.out.println(saver2.toString());
+		BankCustomer bc = new BankCustomer("Conor","Laois");
+		bc.addAccount(saver1);
+		bc.addAccount(saver2);
+		
+		System.out.println(bc);
+		System.out.println("Savings Total = " + bc.balance(bc.getSavacc()));
 	}
 }
