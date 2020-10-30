@@ -9,6 +9,7 @@ public class SavingsAccount
 	private double savingsBalance;
 	
 	///Constructors
+	///Assigns unique numbers to each account
 	public SavingsAccount() 
 	{
 		++ nextAccNo;
@@ -22,6 +23,7 @@ public class SavingsAccount
 	}
 
 	///Getters & Setters
+	///Gets and returns each variable
 	public int getAccNo() 
 	{
 		return accNo;
@@ -48,6 +50,7 @@ public class SavingsAccount
 	}
 	
 	///Misc Methods
+	///Calculates monthly interest
 	public void calculateMonthlyInterest()
 	{
 		savingsBalance+=((getSavingsBalance()*getAnnualInterestRate())/12);

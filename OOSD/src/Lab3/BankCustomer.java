@@ -11,6 +11,7 @@ public class BankCustomer
 	private int noOfAccs = 0;
 	
 	///Constructors
+	///Sets name and address
 	public BankCustomer(String name, String address) 
 	{
 		setName(name);
@@ -18,6 +19,7 @@ public class BankCustomer
 	}
 	
 	///Getters & Setters
+	///Gets and returns each variable
 	public String getName() 
 	{
 		return name;
@@ -52,6 +54,7 @@ public class BankCustomer
 	}
 
 	///Misc Methods
+	///limits amount of accounts to 3
 	public void addAccount(SavingsAccount sav)
 	{
 		if(getNoOfAccs() <= 2)
