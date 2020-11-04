@@ -6,10 +6,9 @@ public class Library
 	public static void main(String[] args)
 	{
 		Book[] books=new Book[3];
-	
+		Scanner input=new Scanner(System.in);
 		for (int i=0;i<=2;i++)
 		{
-			Scanner input=new Scanner(System.in);
 			System.out.println("Enter title:");
 			String title=input.nextLine();
 			System.out.println("Enter author:");
@@ -34,5 +33,6 @@ public class Library
 		{
 			if(b!=null)System.out.println(b.toString());
 		}
+		input.close();
 	}
 }
