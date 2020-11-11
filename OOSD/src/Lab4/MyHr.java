@@ -2,7 +2,8 @@ package Lab4;
 
 import java.util.Scanner;
 
-public class MyHr {
+public class MyHr 
+{
 
 	public static void main(String[] args)
 	{
