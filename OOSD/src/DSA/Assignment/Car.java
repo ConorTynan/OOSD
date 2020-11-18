@@ -1,6 +1,6 @@
 package DSA.Assignment;
 
-public class Car 
+public class Car
 {
 		//Variables
 		private String name;

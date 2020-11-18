@@ -12,7 +12,7 @@ public class CrystalCarWash
 	Car[] cars = new Car[0];
 	Car[] temp;
 	
-	
+
 	do
 	{	//menu system for the user to input what needed							
 		System.out.println("\nPlease select one of the following options:");
