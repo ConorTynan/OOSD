@@ -1,20 +1,21 @@
 package DSA.Assignment;
 
+
 import java.util.Scanner;
 
 public class CrystalCarWash 
 {
 	public static void main(String[] args) 
 	{
-		
 	int choice;
+	int total=0;
 	Scanner in = new Scanner(System.in);
 	Car[] cars = new Car[0];
 	Car[] temp;
 	
-
+	
 	do
-	{	//menu system for the user to input what needed							
+	{//menu system for the user to input what needed							
 		System.out.println("\nPlease select one of the following options:");
 		System.out.println("1. Add a car to the waiting list.");
 		System.out.println("2. Show how many cars are in the waiting list.");
@@ -22,11 +23,14 @@ public class CrystalCarWash
 		System.out.println("4. Remove a car from the waiting list.");
 		System.out.println("5. Show the details of the next car to be washed.");
 		System.out.println("6. Remove all cars from the list on a given wash type.");
-		System.out.println("7. End the programme.");
+		System.out.println("7. The total number of cars that have gone through the car wash.");
+		System.out.println("8. Remove all cars from the waiting list.");
+		System.out.println("9. End the programme.");
 		choice = in.nextInt();
 		
 		if(choice==1) 
 		{
+			
 			in.nextLine();
 			String name;
 			String washType;
@@ -50,6 +54,8 @@ public class CrystalCarWash
 			cars=temp;	//assigns the temporary details into our cars array
 			
 			System.out.println("This car has been added to the waiting list!");
+			
+			total++;
 			}
 		
 		else if(choice==2) 
@@ -63,7 +69,8 @@ public class CrystalCarWash
 			{
 				System.out.println("There are currently no cars in the waiting list.");
 			}
-			else {
+			else
+			{
 				System.out.println("The details of the cars in queue are: ");
 				for(int i=0;i<cars.length;i++) {
 					System.out.println(cars[i]);	//will print out each use of object currently within array
@@ -135,16 +142,31 @@ public class CrystalCarWash
 				System.out.println("All cars that were under " + washTypeClear + " have been removed from the waiting list");
 			}
 		}
-		else if(choice<=1) 
+		else if(choice==7) 
 		{
-			System.out.println("This is not a valid option!"); //Must make this option as otherwise would get an error
+			System.out.println("There have been " + total + " cars that have gone through the car wash.");
 		}
-		else if(choice>=8) 
+		else if(choice==8){
+			if(cars.length==0) 
+			{
+				System.out.println("The waiting list was already empty.");
+			}
+			else {
+			temp = new Car[0];
+			cars=temp;
+			System.out.println("The waiting list has been cleared");
+			}
+		}
+		else if(choice<1)
 		{
-			System.out.println("This is not a valid option!");
+			System.out.println("This is an invalid option!");
+		}
+		else if(choice>9) 
+		{
+			System.out.println("This is an invalid option!");
 		}
 	}
-	while(choice!=7);
+	while(choice!=9);
 	System.out.println("Goodbye!"); //Confirmation of ending.
 	in.close();
 	}
