@@ -35,4 +35,10 @@ public class RoadVehicle extends Object implements ImportDuty
 	{
 		return passengers;
 	}
+
+	@Override
+	public double calculateDuty() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
