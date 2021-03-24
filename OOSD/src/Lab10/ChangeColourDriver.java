@@ -8,7 +8,7 @@ public class ChangeColourDriver
 	public static void main(String[] args) 
 	{
 	
-		ChangeColour changeColour = new ChangeColour("Button");
+		MyColours changeColour = new MyColours("Button");
 		changeColour.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		changeColour.setSize(200, 200);
 		changeColour.setVisible(true);

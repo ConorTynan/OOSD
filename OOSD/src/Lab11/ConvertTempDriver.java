@@ -1,5 +1,7 @@
 package Lab11;
 
+import javax.swing.JFrame;
+
 public class ConvertTempDriver 
 {
 	public static void main(String[] args) 
